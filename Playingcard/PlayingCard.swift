@@ -31,12 +31,9 @@ struct PlayingCard: CustomStringConvertible {
         
         var description: String {
             switch self {
-            case .ace: return "Ace"
-            case .numeric(let number): return "\(number)"
-            case .face(let kind) where kind == "J": return "Joker"
-            case .face(let kind) where kind == "Q": return "Queen"
-            case .face(let kind) where kind == "K": return "King"
-            default: return "Invalid Rank"
+            case .ace: return "A"
+            case .numeric(let number): return String(number)
+            case .face(let kind): return kind
             }
         }
         
